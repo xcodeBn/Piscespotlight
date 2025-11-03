@@ -30,3 +30,4 @@ dependencyResolutionManagement {
 
 include(":demo")
 include(":spotlight")
+include(":testing")

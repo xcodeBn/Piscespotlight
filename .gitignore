@@ -22,3 +22,7 @@ node_modules/
 gradle.properties
 
 iosApp
+
+# Internal testing module (not for public release)
+testing/
+testing
