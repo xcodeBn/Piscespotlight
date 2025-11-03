@@ -101,7 +101,6 @@ piscespotlight/
 ## Documentation
 
 - **Library Documentation**: Comprehensive API reference and usage guide in [`spotlight/README.md`](./spotlight/README.md)
-- **Publishing Guide**: Maven Central publishing instructions in [`PUBLISHING.md`](./PUBLISHING.md)
 - **Demo Documentation**: Demo application guide in [`demo/README.md`](./demo/README.md)
 
 ## Platform Support
