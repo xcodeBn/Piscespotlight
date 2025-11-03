@@ -1,5 +1,14 @@
 # PiscesSpotlight
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.xcodebn/pisces-spotlight?color=blue)](https://central.sonatype.com/artifact/io.github.xcodebn/pisces-spotlight)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-purple.svg)](https://kotlinlang.org)
+[![Compose Multiplatform](https://img.shields.io/badge/Compose%20Multiplatform-1.9.1-blue.svg)](https://www.jetbrains.com/lp/compose-multiplatform/)
+
+[![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com/)
+[![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
+[![Platform](https://img.shields.io/badge/Platform-Desktop-orange.svg)](https://www.jetbrains.com/lp/compose-desktop/)
+
 A cross-platform spotlight tutorial system for Compose Multiplatform applications.
 
 ## Overview
