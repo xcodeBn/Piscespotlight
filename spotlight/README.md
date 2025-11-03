@@ -17,7 +17,7 @@ PiscesSpotlight enables developers to create interactive, step-by-step tutorials
 
 ## Features
 
-- **Cross-Platform**: Works on Android, iOS, Desktop, and Web
+- **Cross-Platform**: Works on Android, iOS, and Desktop
 - **Type-Safe Targets**: Use data objects or strings to identify UI components
 - **Smart Positioning**: Automatic tooltip positioning with edge detection
 - **Multiple Tutorials**: Support for registering and managing multiple tutorial sequences
@@ -331,10 +331,6 @@ Fully supported. Ensure proper framework configuration in your Kotlin Multiplatf
 ### Desktop (JVM)
 
 Fully supported. Works with Compose for Desktop applications.
-
-### Web (Wasm/JS)
-
-Fully supported. Compatible with Compose for Web targets.
 
 ## Best Practices
 

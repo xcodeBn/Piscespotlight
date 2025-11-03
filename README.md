@@ -17,7 +17,7 @@ PiscesSpotlight is a Kotlin Multiplatform library that provides an elegant solut
 
 ## Key Features
 
-- Cross-platform support for Android, iOS, Desktop, and Web
+- Cross-platform support for Android, iOS, and Desktop
 - Type-safe target system with compile-time verification
 - Smart tooltip positioning with automatic edge detection
 - Reactive state management using Compose primitives
