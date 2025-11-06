@@ -1,5 +1,8 @@
 package io.piscesbn.xcodebn.piscespotlight.spotlight
 
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
+
 /**
  * Represents a single step in a spotlight tutorial sequence.
  *
@@ -15,6 +18,10 @@ package io.piscesbn.xcodebn.piscespotlight.spotlight
  *                          Defaults to [TooltipPosition.Bottom]. The system will
  *                          automatically adjust if the preferred position would cause
  *                          the tooltip to render off-screen.
+ * @property tooltipWidth Custom width for the tooltip. Defaults to 280.dp.
+ * @property tooltipHeight Fixed height for the tooltip. Defaults to 200.dp. Using a fixed
+ *                         height ensures consistent positioning and prevents tooltip jumping
+ *                         between steps. Content is scrollable if it exceeds this height.
  *
  * @see SpotlightTarget
  * @see TooltipPosition
@@ -24,7 +31,9 @@ data class SpotlightStep(
     val targetKey: SpotlightTarget,
     val title: String,
     val description: String,
-    val tooltipPosition: TooltipPosition = TooltipPosition.Bottom
+    val tooltipPosition: TooltipPosition = TooltipPosition.Bottom,
+    val tooltipWidth: Dp = 280.dp,
+    val tooltipHeight: Dp = 200.dp
 ) {
     /**
      * Convenience constructor for string-based targets.
@@ -41,13 +50,17 @@ data class SpotlightStep(
      * @param title The title text displayed in the tooltip
      * @param description The description text displayed in the tooltip
      * @param tooltipPosition Preferred tooltip position
+     * @param tooltipWidth Custom width for the tooltip
+     * @param tooltipHeight Custom height for the tooltip
      */
     constructor(
         key: String,
         title: String,
         description: String,
-        tooltipPosition: TooltipPosition = TooltipPosition.Bottom
-    ) : this(StringTarget(key), title, description, tooltipPosition)
+        tooltipPosition: TooltipPosition = TooltipPosition.Bottom,
+        tooltipWidth: Dp = 280.dp,
+        tooltipHeight: Dp = 200.dp
+    ) : this(StringTarget(key), title, description, tooltipPosition, tooltipWidth, tooltipHeight)
 }
 
 /**

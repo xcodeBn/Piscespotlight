@@ -1,0 +1,129 @@
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/PiscesSpotlightKt {
+	public static final fun PiscesSpotlightContainer (Lio/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialState;Ljava/util/List;Lkotlin/jvm/functions/Function1;ZLkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun getLocalPiscesTutorialState ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+	public static final fun piscesSpotlightTarget (Landroidx/compose/ui/Modifier;Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/Modifier;
+	public static final fun piscesSpotlightTarget (Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/Modifier;
+	public static final fun rememberPiscesTutorialController (Landroidx/compose/runtime/Composer;I)Lio/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialController;
+	public static final fun rememberPiscesTutorialState (Landroidx/compose/runtime/Composer;I)Lio/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialState;
+}
+
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialConfig {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/util/List;ZLkotlin/jvm/functions/Function0;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;ZLkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Z
+	public final fun component4 ()Lkotlin/jvm/functions/Function0;
+	public final fun copy (Ljava/lang/String;Ljava/util/List;ZLkotlin/jvm/functions/Function0;)Lio/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialConfig;
+	public static synthetic fun copy$default (Lio/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialConfig;Ljava/lang/String;Ljava/util/List;ZLkotlin/jvm/functions/Function0;ILjava/lang/Object;)Lio/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialConfig;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEnabled ()Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getScreenPredicate ()Lkotlin/jvm/functions/Function0;
+	public final fun getSteps ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialController {
+	public static final field $stable I
+	public fun <init> (Lio/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialState;)V
+	public final fun getTargetPositions ()Ljava/util/Map;
+	public final fun startTutorial (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun stopTutorial ()V
+}
+
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialState {
+	public static final field $stable I
+	public fun <init> ()V
+	public final fun clearTutorials ()V
+	public final fun getActiveTutorial ()Lio/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialConfig;
+	public final fun getAllTargetPositions ()Ljava/util/Map;
+	public final fun getCurrentStep ()Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightStep;
+	public final fun getCurrentStepIndex ()I
+	public final fun getCurrentTutorialId ()Ljava/lang/String;
+	public final fun getTargetPosition (Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;)Landroidx/compose/ui/geometry/Rect;
+	public final fun isCompleting ()Z
+	public final fun isReady ()Z
+	public final fun nextStep (Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun registerTutorial (Lio/piscesbn/xcodebn/piscespotlight/spotlight/PiscesTutorialConfig;)V
+	public final fun reset ()V
+	public final fun resetAll ()V
+	public final fun shouldShowTutorial ()Z
+	public final fun startTutorial (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun updateTargetPosition (Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;Landroidx/compose/ui/geometry/Rect;)V
+}
+
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/ScreenDimensions {
+	public static final field $stable I
+	public synthetic fun <init> (FFLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-D9Ej5fM ()F
+	public final fun component2-D9Ej5fM ()F
+	public final fun copy-YgX7TsA (FF)Lio/piscesbn/xcodebn/piscespotlight/spotlight/ScreenDimensions;
+	public static synthetic fun copy-YgX7TsA$default (Lio/piscesbn/xcodebn/piscespotlight/spotlight/ScreenDimensions;FFILjava/lang/Object;)Lio/piscesbn/xcodebn/piscespotlight/spotlight/ScreenDimensions;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHeightDp-D9Ej5fM ()F
+	public final fun getWidthDp-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/ScreenDimensions_androidKt {
+	public static final fun getScreenDimensions (Landroidx/compose/runtime/Composer;I)Lio/piscesbn/xcodebn/piscespotlight/spotlight/ScreenDimensions;
+}
+
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightStep {
+	public static final field $stable I
+	public synthetic fun <init> (Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;Ljava/lang/String;Ljava/lang/String;Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;FFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;Ljava/lang/String;Ljava/lang/String;Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;FFLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;FFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;FFLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;
+	public final fun component5-D9Ej5fM ()F
+	public final fun component6-D9Ej5fM ()F
+	public final fun copy-Kr38-dQ (Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;Ljava/lang/String;Ljava/lang/String;Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;FF)Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightStep;
+	public static synthetic fun copy-Kr38-dQ$default (Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightStep;Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;Ljava/lang/String;Ljava/lang/String;Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;FFILjava/lang/Object;)Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightStep;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getTargetKey ()Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun getTooltipHeight-D9Ej5fM ()F
+	public final fun getTooltipPosition ()Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;
+	public final fun getTooltipWidth-D9Ej5fM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class io/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget {
+}
+
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTargetKt {
+	public static final fun toTarget (Ljava/lang/String;)Lio/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget;
+}
+
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/StringTarget : io/piscesbn/xcodebn/piscespotlight/spotlight/SpotlightTarget {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/piscesbn/xcodebn/piscespotlight/spotlight/StringTarget;
+	public static synthetic fun copy$default (Lio/piscesbn/xcodebn/piscespotlight/spotlight/StringTarget;Ljava/lang/String;ILjava/lang/Object;)Lio/piscesbn/xcodebn/piscespotlight/spotlight/StringTarget;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getKey ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition : java/lang/Enum {
+	public static final field Bottom Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;
+	public static final field Left Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;
+	public static final field Right Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;
+	public static final field Top Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;
+	public static fun values ()[Lio/piscesbn/xcodebn/piscespotlight/spotlight/TooltipPosition;
+}
+

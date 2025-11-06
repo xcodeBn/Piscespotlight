@@ -15,12 +15,15 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
@@ -521,7 +524,6 @@ class PiscesTutorialController(
 
 /**
  * Spotlight overlay rendering with smart tooltip positioning
- * Uses BoxWithConstraints for multiplatform screen size detection
  */
 @Composable
 private fun PiscesSpotlightOverlay(
@@ -533,7 +535,6 @@ private fun PiscesSpotlightOverlay(
 ) {
     val density = LocalDensity.current
 
-    // Use BoxWithConstraints for multiplatform-compatible screen size
     BoxWithConstraints(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -608,33 +609,27 @@ private fun PiscesSpotlightOverlay(
                 )
             }
 
-            // Smart tooltip positioning with screen edge detection
-            var tooltipSize by remember { mutableStateOf(Size.Zero) }
-
+            // Calculate tooltip position once with fixed size estimates
             val tooltipOffset = calculatePiscesTooltipOffset(
                 targetRect = targetRect,
                 tooltipPosition = step.tooltipPosition,
                 density = density,
                 screenWidth = screenWidth,
                 screenHeight = screenHeight,
-                tooltipSize = tooltipSize
+                tooltipWidthDp = step.tooltipWidth,
+                tooltipHeightDp = step.tooltipHeight
             )
 
             Card(
                 modifier = Modifier
-                    .onGloballyPositioned { coordinates ->
-                        tooltipSize = Size(
-                            coordinates.size.width.toFloat(),
-                            coordinates.size.height.toFloat()
-                        )
-                    }
                     .offset {
                         IntOffset(
                             tooltipOffset.x.toInt(),
                             tooltipOffset.y.toInt()
                         )
                     }
-                    .width(280.dp),
+                    .width(step.tooltipWidth)
+                    .height(step.tooltipHeight),
                 shape = RoundedCornerShape(16.dp),
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.surface
@@ -642,7 +637,10 @@ private fun PiscesSpotlightOverlay(
                 elevation = CardDefaults.cardElevation(8.dp)
             ) {
                 Column(
-                    modifier = Modifier.padding(20.dp)
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .padding(20.dp)
                 ) {
                     Text(
                         text = "${currentStepIndex + 1}/$totalSteps",
@@ -655,7 +653,9 @@ private fun PiscesSpotlightOverlay(
                     Text(
                         text = step.title,
                         style = MaterialTheme.typography.titleMedium,
-                        color = MaterialTheme.colorScheme.onSurface
+                        color = MaterialTheme.colorScheme.onSurface,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
                     )
 
                     Spacer(modifier = Modifier.height(8.dp))
@@ -663,10 +663,12 @@ private fun PiscesSpotlightOverlay(
                     Text(
                         text = step.description,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 5,
+                        overflow = TextOverflow.Ellipsis
                     )
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.weight(1f))
 
                     Button(
                         onClick = onNext,
@@ -689,11 +691,12 @@ private fun calculatePiscesTooltipOffset(
     density: Density,
     screenWidth: Float,
     screenHeight: Float,
-    tooltipSize: Size
+    tooltipWidthDp: androidx.compose.ui.unit.Dp,
+    tooltipHeightDp: androidx.compose.ui.unit.Dp
 ): Offset {
-    // Use actual measured size if available, otherwise use estimates
-    val tooltipWidth = if (tooltipSize.width > 0) tooltipSize.width else with(density) { 280.dp.toPx() }
-    val tooltipHeight = if (tooltipSize.height > 0) tooltipSize.height else with(density) { 200.dp.toPx() }
+    // Use fixed size estimates for position calculation
+    val tooltipWidth = with(density) { tooltipWidthDp.toPx() }
+    val tooltipHeight = with(density) { tooltipHeightDp.toPx() }
     val margin = with(density) { 16.dp.toPx() }
     val edgePadding = with(density) { 16.dp.toPx() }
 
