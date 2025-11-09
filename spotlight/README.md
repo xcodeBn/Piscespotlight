@@ -33,7 +33,7 @@ Add to your `libs.versions.toml`:
 
 ```toml
 [versions]
-piscesSpotlight = "0.1.0"
+piscesSpotlight = "0.2.0"
 
 [libraries]
 piscesSpotlight = { module = "io.github.xcodebn:pisces-spotlight", version.ref = "piscesSpotlight" }
@@ -55,7 +55,7 @@ kotlin {
 
 ```kotlin
 commonMain.dependencies {
-    implementation("io.github.xcodebn:pisces-spotlight:0.1.0")
+    implementation("io.github.xcodebn:pisces-spotlight:0.2.0")
 }
 ```
 

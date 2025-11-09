@@ -30,7 +30,7 @@ Add PiscesSpotlight to your Compose Multiplatform project:
 
 ```kotlin
 commonMain.dependencies {
-    implementation("io.github.xcodebn:pisces-spotlight:0.1.0")
+    implementation("io.github.xcodebn:pisces-spotlight:0.2.0")
 }
 ```
 

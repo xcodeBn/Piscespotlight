@@ -40,7 +40,7 @@ fun PDFSummarizerApp() {
                         UploadButtonTarget,
                         "Upload PDF",
                         "Start by uploading a PDF document you want to summarize",
-                        TooltipPosition.Bottom
+                        TooltipPosition.Top
                     ),
                     SpotlightStep(
                         SummarizeButtonTarget,
@@ -52,19 +52,25 @@ fun PDFSummarizerApp() {
                         HighlightToolTarget,
                         "Highlight Tool",
                         "Use this to highlight important sections in your document",
-                        TooltipPosition.Bottom
+                        TooltipPosition.Top
                     ),
                     SpotlightStep(
                         AnnotateToolTarget,
                         "Annotate Tool",
                         "Add notes and comments to your PDF",
-                        TooltipPosition.Bottom
+                        TooltipPosition.Top
+                    ),
+                    SpotlightStep(
+                        ExportToolTarget,
+                        "Export",
+                        "Export your document with annotations",
+                        TooltipPosition.Top
                     ),
                     SpotlightStep(
                         SaveButtonTarget,
                         "Save",
                         "Save your work and annotations",
-                        TooltipPosition.Left
+                        TooltipPosition.Top
                     ),
                     SpotlightStep(
                         AIAssistantTarget,

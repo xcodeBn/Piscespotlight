@@ -31,7 +31,7 @@ kotlin {
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
-            implementation("io.github.xcodebn:pisces-spotlight:0.1.0")
+            implementation("io.github.xcodebn:pisces-spotlight:0.2.0")
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)

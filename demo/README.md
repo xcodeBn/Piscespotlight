@@ -23,7 +23,7 @@ The demo showcases a 7-step tutorial covering:
 This demo uses the published Maven Central version of PiscesSpotlight:
 
 ```kotlin
-implementation("io.github.xcodebn:pisces-spotlight:0.1.0")
+implementation("io.github.xcodebn:pisces-spotlight:0.2.0")
 ```
 
 ## Key Implementation Highlights
